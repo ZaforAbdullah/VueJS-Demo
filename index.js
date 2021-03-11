@@ -1,4 +1,4 @@
-var vm = new Vue({
+var vm1 = new Vue({
   el: '#app-1',
   data: {
     message: 'Hello Vue!'
@@ -6,7 +6,7 @@ var vm = new Vue({
 })
 
 
-var vm1 = new Vue({
+var vm2 = new Vue({
   el: '#app-2',
   data: {
     message: '<h1>HELLO '+ 
@@ -16,14 +16,14 @@ var vm1 = new Vue({
   }
 })
 
-var vm2 = new Vue({
+var vm3 = new Vue({
   el: '#app-3',
   data: {
     message: 'Hello Vue!'
   }
 })
 
-var vm2 = new Vue({
+var vm4 = new Vue({
   el: '#app-4',
   data: {
     message: 'Hello Vue!',
@@ -31,7 +31,7 @@ var vm2 = new Vue({
   }
 })
 
-var vm2 = new Vue({
+var vm5 = new Vue({
   el: '#app-5',
   data: {
     message: 'Hello Vue!',
@@ -42,5 +42,12 @@ var vm2 = new Vue({
     alerttest: function() {
       alert('test')
     }
+  }
+})
+
+var vm6 = new Vue({
+  el: '#app-6',
+  data: {
+	url: 'https://www.facebook.com/'
   }
 })
