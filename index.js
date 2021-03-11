@@ -22,3 +22,11 @@ var vm2 = new Vue({
     message: 'Hello Vue!'
   }
 })
+
+var vm2 = new Vue({
+  el: '#app-3',
+  data: {
+    message: 'Hello Vue!',
+	seen: true
+  }
+})
