@@ -29,8 +29,10 @@
 	
 	<div id="app-5">
 	  <a v-bind:href="url"> Facebook </a>
-	  <br>
+	  <br><br>
 	  <a v-on:click="alerttest"> Alert Test </a>
+	  <br><br>
+	  <form v-on:submit.prevent="onSubmit"> Submit </form>
 	</div>
 	
 	<script src="index.js"></script>
