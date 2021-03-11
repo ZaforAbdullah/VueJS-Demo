@@ -7,8 +7,14 @@
 
 </head>
 <body>
-	<div id="app">
+	<div id="app-1">
 	  {{ message }}
+	</div>
+	
+	<div id="app-2">
+	  <p>{{ foo }}</p>
+	  <!-- this will no longer update `foo`! -->
+	  <button v-on:click="foo = 'baz'">Change it</button>
 	</div>
 
 	<script src="index.js"></script>
