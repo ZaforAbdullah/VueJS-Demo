@@ -5,3 +5,13 @@ var vm = new Vue({
   }
 })
 
+
+var vm1 = new Vue({
+  el: '#app-2',
+  data: {
+    message: '<h1>HELLO '+ 
+                           '<span style="color:blue;">'+ 
+                              'WORLD</span>'+ 
+                         '</h1>'
+  }
+})
