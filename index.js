@@ -24,9 +24,23 @@ var vm2 = new Vue({
 })
 
 var vm2 = new Vue({
-  el: '#app-3',
+  el: '#app-4',
   data: {
     message: 'Hello Vue!',
 	seen: true
+  }
+})
+
+var vm2 = new Vue({
+  el: '#app-5',
+  data: {
+    message: 'Hello Vue!',
+	seen: true,
+	url: 'https://www.facebook.com/'
+  },
+    methods: {
+    alerttest: function() {
+      alert('test')
+    }
   }
 })
