@@ -15,3 +15,10 @@ var vm1 = new Vue({
                          '</h1>'
   }
 })
+
+var vm2 = new Vue({
+  el: '#app-3',
+  data: {
+    message: 'Hello Vue!'
+  }
+})
