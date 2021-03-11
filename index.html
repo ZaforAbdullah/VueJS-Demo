@@ -9,17 +9,11 @@
 <body>
 	<div id="app-1">
 	  {{ message }}
+	  <div>
+		<span v-once>This will never change: {{ message }}</span>
+	  </div>
 	</div>
 	
-	<div id="app-2">
-	  <p>{{ foo }}</p>
-	  <!-- this will no longer update `foo`! -->
-	  <button v-on:click="foo = 'baz'">Change it</button>
-	</div>
-	
-	<div id="app-3">
-		<p>Test for app-3</p>
-	</div>
 
 	<script src="index.js"></script>
 </body>
