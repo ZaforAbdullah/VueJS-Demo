@@ -51,3 +51,15 @@ var vm6 = new Vue({
 	url: 'https://www.facebook.com/'
   }
 })
+
+var vm7 = new Vue({
+  el: '#app-7',
+  data: {
+	url: 'https://www.facebook.com/'
+  },
+    methods: {
+    alerttest: function() {
+      alert('test')
+    }
+  }
+})
