@@ -1,23 +1,16 @@
-var example1 = new Vue({
-  el: '#example-1',
-  data: {
-    message: 'message',
-	checked: false,
-	checkedNames: true,
-	picked: 'One',
-	selected: 'A',
-	multiples: ''
-  }
+// Define a new component called button-counter
+Vue.component('button-counter', {
+  data: function () {
+    return {
+      count: 0
+    }
+  },
+  template: '<button v-on:click="count++">You clicked me {{ count }} times.</button>'
 })
 
-var example12 = new Vue({
-  el: 'example-2',
+var example1 = new Vue({
+  el: '#components-demo',
   data: {
-    selected: 'A',
-    options: [
-      { text: 'One', value: 'A' },
-      { text: 'Two', value: 'B' },
-      { text: 'Three', value: 'C' }
-    ]
+    message: 'message'
   }
 })
