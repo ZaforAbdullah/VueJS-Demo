@@ -34,6 +34,14 @@ var vm1 = new Vue({
   }
 })
 
+var vm1 = new Vue({
+  el: '#example-4',
+  data: {
+   activeColor: 'red',
+   fontSize: 30
+ }
+})
+
 
 
 
