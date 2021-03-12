@@ -46,6 +46,11 @@
 	<!-- i.e. not from a child element -->
 	<div v-on:click.self="doThat">Self</div>
 	
+	<!-- only call `vm.submit()` when the `key` is `Enter` -->
+	<input v-on:keyup.enter="submit">
+	
+	<input v-on:keyup.page-down="onPageDown">
+	
 	<script src="index.js"></script>
 </body>
 </html>
