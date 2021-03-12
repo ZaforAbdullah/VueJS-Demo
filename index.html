@@ -16,6 +16,16 @@
 	  <button-counter></button-counter>
 	  <button-counter></button-counter>
 	</div>
+	
+	<div id="components-demo-2">
+		<blog-post title="My journey with Vue"></blog-post>
+		<blog-post title="Blogging with Vue"></blog-post>
+		<blog-post title="Why Vue is so fun"></blog-post>
+	</div>
+	
+	<div id="components-demo-3">
+		<blog-post v-for="post in posts" v-bind:key="post.id" v-bind:title="post.title"></blog-post>
+	</div>
 
 	<script src="index.js"></script>
 </body>
