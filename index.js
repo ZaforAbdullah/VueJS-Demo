@@ -22,6 +22,10 @@ var vm1 = new Vue({
   }
 })
 
+Vue.component('my-component', {
+  template: '<p class="foo bar">Hi</p>'
+})
+
 var vm1 = new Vue({
   el: '#example-3',
   data: {
