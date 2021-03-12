@@ -11,29 +11,9 @@
 <body>
 	
 	<div id="example-1">
-	  <p>Original message: "{{ message }}"</p>
-	  <p>Computed reversed message: "{{ reversedMessage }}"</p>
+	  <div class="static" v-bind:class="{ active: isActive, 'text-danger': hasError }"></div>
 	</div>
-	<div id="example-2">
-	  <p>Original message: "{{ message }}"</p>
-	  <input v-model="message">
-	  <p>Computed reversed message: "{{ reversedMessage }}"</p>
-	</div>
-	
-	<div id="example-3">{{ fullName }}</div>
-	
-	<div id="example-4">{{ fullName }}</div>
-	
-	<div id="example-5">{{ fullName }}</div>
-	
-	<div id="watch-example">
-	  <p>
-		Ask a yes/no question:
-		<input v-model="question">
-	  </p>
-	  <p>{{ answer }}</p>
-	</div>
-	
+
 	<script src="index.js"></script>
 </body>
 </html>
