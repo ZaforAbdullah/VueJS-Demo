@@ -34,7 +34,17 @@
 		  {{ index }}. {{ name }}: {{ value }}
 		</div>
 	</div>
-
+	
+	<div id="example-3">
+		<li v-for="n in evenNumbers">{{ n }}</li>
+	</div>
+	
+	<div id="example-4">
+		<ul v-for="set in sets">
+		  <li v-for="n in even(set)">{{ n }}</li>
+		</ul>
+	</div>
+	
 	<script src="index.js"></script>
 </body>
 </html>
