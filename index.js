@@ -1,7 +1,7 @@
 var vm = new Vue({
     el: '#example-1',
     data: {
-        a: true,
+        a: false,
         b: false
     }
 });
