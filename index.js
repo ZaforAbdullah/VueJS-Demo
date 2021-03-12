@@ -14,3 +14,10 @@ var example1 = new Vue({
     message: 'message'
   }
 })
+
+var example1 = new Vue({
+  el: '#components-demo-1',
+  data: {
+    message: 'message'
+  }
+})
