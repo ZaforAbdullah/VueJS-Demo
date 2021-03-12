@@ -7,49 +7,11 @@
 
 </head>
 <body>
-	<div id="app-1">
-	  {{ message }}
-	  <div>
-		<span v-once>This will never change: {{ message }}</span>
-	  </div>
-	</div>
-
-	<div id="app-2">
-	  	<p>Using mustaches: {{ message }}</p>
-		<p>Using v-html directive: <span v-html="message"></span></p>
-	</div>
 	
-	<div id="app-3">
-	  {{ 1 + 1}}
+	<div id="example">
+	  <p>Original message: "{{ message }}"</p>
+	  <p>Computed reversed message: "{{ reversedMessage }}"</p>
 	</div>
-	
-	<div id="app-4">
-	  <p v-if="seen">Now you see me</p>
-	</div>
-	
-	<div id="app-5">
-	  <a v-bind:href="url"> Facebook </a>
-	  <br><br>
-	  <a v-on:click="alerttest"> Alert Test </a>
-	  <br><br>
-	  <form v-on:submit.prevent="onSubmit"> Submit </form>
-	</div>
-	
-	<div id="app-6">	  
-		<!-- full syntax -->
-		<a v-bind:href="url"> Facebook </a>
-
-		<!-- shorthand -->
-		<a :href="url"> Facebook </a>
-	</div>
-	
-	<div id="app-7">	  
-		<a v-on:click="alerttest"> Alerttest </a>
-
-		<!-- shorthand -->
-		<a @click="alerttest"> Alerttest </a>
-	</div>
-	
 	
 	<script src="index.js"></script>
 </body>
