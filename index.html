@@ -8,57 +8,68 @@
 <body>
 	
 	<div id="example-1">
-	  <button v-on:click="counter += 1">Add 1</button>
-	  <p>The button above has been clicked {{ counter }} times.</p>
+	
+		<input v-model="message" placeholder="edit me">
+		<p>Message is: {{ message }}</p>
+		
+		<span>Multiline message is:</span>
+		<p style="white-space: pre-line;">{{ message }}</p>
+		<br>
+		<textarea v-model="message" placeholder="add multiple lines"></textarea>
+		
+		<br>
+		<input type="checkbox" id="checkbox" v-model="checked">
+		<label for="checkbox">{{ checked }}</label>
+		
+		<br>
+		<input type="checkbox" id="jack" value="Jack" v-model="checkedNames">
+		<label for="jack">Jack</label>
+		<input type="checkbox" id="john" value="John" v-model="checkedNames">
+		<label for="john">John</label>
+		<input type="checkbox" id="mike" value="Mike" v-model="checkedNames">
+		<label for="mike">Mike</label>
+		<br>
+		<span>Checked names: {{ checkedNames }}</span>
+		
+		<br>
+		<input type="radio" id="one" value="One" v-model="picked">
+		<label for="one">One</label>
+		<br>
+		<input type="radio" id="two" value="Two" v-model="picked">
+		<label for="two">Two</label>
+		<br>
+		<span>Picked: {{ picked }}</span>
+		
+		<br>
+		<select v-model="selected">
+		  <option disabled value="">Please select one</option>
+		  <option>A</option>
+		  <option>B</option>
+		  <option>C</option>
+		</select>
+		<span>Selected: {{ selected }}</span>
+		
+		<br>
+		<select v-model="multiples" multiple>
+		  <option>A</option>
+		  <option>B</option>
+		  <option>C</option>
+		</select>
+		<br>
+		<span>Selected: {{ selected }}</span>
+				
 	</div>
 	
 	<div id="example-2">
-	  <!-- `greet` is the name of a method defined below -->
-	  <button v-on:click="greet">Greet</button>
+	
+		<select v-model="selected">
+		  <option v-for="option in options" v-bind:value="option.value">
+			{{ option.text }}
+		  </option>
+		</select>
+		<span>Selected: {{ selected }}</span>
+				
 	</div>
-	
-	<div id="example-3">
-	  <button v-on:click="say('hi')">Say hi</button>
-	  <button v-on:click="say('what')">Say what</button>
-	</div>
-	
-	<button v-on:click="warn('Form cannot be submitted yet.', $event)">
-	  Submit
-	</button>
-	
-	<!-- the click event's propagation will be stopped -->
-	<a v-on:click.stop="doThis"></a>
-
-	<!-- the submit event will no longer reload the page -->
-	<form v-on:submit.prevent="onSubmit"></form>
-
-	<!-- modifiers can be chained -->
-	<a v-on:click.stop.prevent="doThat"></a>
-
-	<!-- just the modifier -->
-	<form v-on:submit.prevent></form>
-
-	<!-- use capture mode when adding the event listener -->
-	<!-- i.e. an event targeting an inner element is handled here before being handled by that element -->
-	<div v-on:click.capture="doThis">Capture</div>
-
-	<!-- only trigger handler if event.target is the element itself -->
-	<!-- i.e. not from a child element -->
-	<div v-on:click.self="doThat">Self</div>
-	
-	<!-- only call `vm.submit()` when the `key` is `Enter` -->
-	<input v-on:keyup.enter="submit">
-	
-	<input v-on:keyup.page-down="onPageDown">
-	
-	<!-- this will fire even if Alt or Shift is also pressed -->
-	<button v-on:click.ctrl="onClick">A</button>
-
-	<!-- this will only fire when Ctrl and no other keys are pressed -->
-	<button v-on:click.ctrl.exact="onCtrlClick">A</button>
-
-	<!-- this will only fire when no system modifiers are pressed -->
-	<button v-on:click.exact="onClick">A</button>
 	
 	<script src="index.js"></script>
 </body>
