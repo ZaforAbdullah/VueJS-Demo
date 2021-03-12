@@ -12,6 +12,11 @@
 	
 	<div id="example-1">
 	  <div class="static" v-bind:class="{ active: isActive, 'text-danger': hasError }"></div>
+	  <div v-bind:class="classObject"></div>
+	</div>
+	
+	<div id="example-2">
+	  <div v-bind:class="classObject"></div>
 	</div>
 
 	<script src="index.js"></script>
