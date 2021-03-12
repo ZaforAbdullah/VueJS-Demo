@@ -22,6 +22,14 @@ var vm1 = new Vue({
   }
 })
 
+var vm1 = new Vue({
+  el: '#example-3',
+  data: {
+	activeClass: 'active',
+	errorClass: 'text-danger'
+  }
+})
+
 
 
 
