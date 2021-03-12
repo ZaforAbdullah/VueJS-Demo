@@ -17,6 +17,15 @@
 	  <button v-on:click="greet">Greet</button>
 	</div>
 	
+	<div id="example-3">
+	  <button v-on:click="say('hi')">Say hi</button>
+	  <button v-on:click="say('what')">Say what</button>
+	</div>
+	
+	<button v-on:click="warn('Form cannot be submitted yet.', $event)">
+	  Submit
+	</button>
+	
 	<script src="index.js"></script>
 </body>
 </html>
