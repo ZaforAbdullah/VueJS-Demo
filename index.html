@@ -18,6 +18,22 @@
 		{{ parentMessage }} - {{ index }} - {{ item.message }}
 	  </li>
 	</ul>
+	
+	<div id="v-for-object">
+		<ul>
+		  <li v-for="value in object">
+			{{ value }}
+		  </li>
+		</ul>
+		
+		<div v-for="(value, name) in object">
+		  {{ name }}: {{ value }}
+		</div>
+		
+		<div v-for="(value, name, index) in object">
+		  {{ index }}. {{ name }}: {{ value }}
+		</div>
+	</div>
 
 	<script src="index.js"></script>
 </body>
