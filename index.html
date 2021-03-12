@@ -3,30 +3,12 @@
 <head>
     <meta charset="utf-8">
 	<script src="https://cdn.jsdelivr.net/npm/vue@2.6.12/dist/vue.js"></script>
-	<script src="https://cdn.jsdelivr.net/npm/axios@0.12.0/dist/axios.min.js"></script>
-	<script src="https://cdn.jsdelivr.net/npm/lodash@4.13.1/lodash.min.js"></script>
     <title>Demo</title>
-
 </head>
 <body>
 	
 	<div id="example-1">
-	  <div class="static" v-bind:class="{ active: isActive, 'text-danger': hasError }"></div>
-	  <div v-bind:class="classObject"></div>
-	</div>
-	
-	<div id="example-2">
-	  <div v-bind:class="classObject"></div>
-	</div>
-	
-		
-	<div id="example-3">
-	  <div v-bind:class="[activeClass, errorClass]"></div>
-	  <my-component class="baz boo"></my-component>
-	</div>
-	
-	<div id="example-4">
-		<div v-bind:style="{ color: activeColor, fontSize: fontSize + 'px' }"></div>
+		<h1 v-if="a">The condition is true</h1>
 	</div>
 
 	<script src="index.js"></script>
