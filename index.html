@@ -9,7 +9,7 @@
 	
 	<div id="blog-posts-events-demo">
 	  <div :style="{ fontSize: postFontSize + 'em' }">
-		<blog-posts v-for="post in posts" v-bind:key="post.id" v-bind:post="post" v-on:enlarge-text="postFontSize += $event"></blog-posts>
+		<blog-posts v-for="post in posts" v-bind:key="post.id" v-bind:post="post" v-on:enlarge-text="onEnlargeText"></blog-posts>
 	  </div>
 	</div>
 

@@ -20,5 +20,10 @@ var example1 = new Vue({
       { id: 3, title: 'Why Vue is so fun', content: '<b> Third Content </br>', publishedAt: 'Today', comments: 'good'}
     ],
 	postFontSize: 1
+  },
+  methods: {
+  onEnlargeText: function (enlargeAmount) {
+    this.postFontSize += enlargeAmount
+    }
   }
 })
