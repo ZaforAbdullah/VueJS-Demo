@@ -6,34 +6,10 @@
     <title>Demo</title>
 </head>
 <body>
-
-	<div id="components-demo">
-	  <button-counter></button-counter>
-	</div>
-	
-	<div id="components-demo-1">
-	  <button-counter></button-counter>
-	  <button-counter></button-counter>
-	  <button-counter></button-counter>
-	</div>
-	
-	<div id="components-demo-2">
-		<blog-post title="My journey with Vue"></blog-post>
-		<blog-post title="Blogging with Vue"></blog-post>
-		<blog-post title="Why Vue is so fun"></blog-post>
-	</div>
-	
-	<div id="components-demo-3">
-		<blog-post v-for="post in posts" v-bind:key="post.id" v-bind:title="post.title"></blog-post>
-	</div>
-	
-	<div id="components-demo-4">
-		<blog-posts v-for="post in posts" v-bind:key="post.id" v-bind:post="post"></blog-posts>
-	</div>
 	
 	<div id="blog-posts-events-demo">
 	  <div :style="{ fontSize: postFontSize + 'em' }">
-		<blog-postss v-for="post in posts" v-bind:key="post.id" v-bind:post="post" v-on:enlarge-text="postFontSize += 0.1"></blog-postss>
+		<blog-posts v-for="post in posts" v-bind:key="post.id" v-bind:post="post" v-on:enlarge-text="postFontSize += $event"></blog-posts>
 	  </div>
 	</div>
 
