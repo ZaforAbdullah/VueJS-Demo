@@ -30,6 +30,12 @@
 	<div id="components-demo-4">
 		<blog-posts v-for="post in posts" v-bind:key="post.id" v-bind:post="post"></blog-posts>
 	</div>
+	
+	<div id="blog-posts-events-demo">
+	  <div :style="{ fontSize: postFontSize + 'em' }">
+		<blog-postss v-for="post in posts" v-bind:key="post.id" v-bind:post="post" v-on:enlarge-text="postFontSize += 0.1"></blog-postss>
+	  </div>
+	</div>
 
 	<script src="index.js"></script>
 </body>
