@@ -11,6 +11,15 @@ Vue.component('blog-posts', {
   `
 })
 
+Vue.component('alert-box', {
+  template: `
+    <div class="demo-alert-box">
+      <strong>Error!</strong>
+      <slot></slot>
+    </div>
+  `
+})
+
 var example1 = new Vue({
   el: '#blog-posts-events-demo',
   data: {
@@ -27,3 +36,5 @@ var example1 = new Vue({
     }
   }
 })
+
+
