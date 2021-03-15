@@ -1,22 +1,17 @@
-Vue.component('blog-posts', {
-  props: ['post'],
+Vue.component('base-checkbox', {
+  model: {
+    prop: 'checked',
+    event: 'change'
+  },
+  props: {
+    checked: Boolean
+  },
   template: `
-    <div class="blog-post">
-      <h3>{{ post.title }}</h3>
-      <button v-on:click="$emit('enlarge-text', 0.1)">
-		Enlarge text
-	  </button>
-      <div v-html="post.content"></div>
-    </div>
-  `
-})
-
-Vue.component('alert-box', {
-  template: `
-    <div class="demo-alert-box">
-      <strong>Error!</strong>
-      <slot></slot>
-    </div>
+    <input
+      type="checkbox"
+      v-bind:checked="checked"
+      v-on:change="$emit('change', $event.target.checked)"
+    >
   `
 })
 
