@@ -1,9 +1,9 @@
 Vue.component('navigation-link', {
 	props: ['url'],
 	template: `
-	<a v-bind:href="url" class="nav-link">
-	  <slot></slot>
-	</a>
+		<button type="submit">
+		  <slot>Submit</slot>
+		</button>
 	`
 })
 
