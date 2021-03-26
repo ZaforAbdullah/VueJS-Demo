@@ -1,9 +1,17 @@
 Vue.component('navigation-link', {
 	props: ['url'],
 	template: `
-		<button type="submit">
-		  <slot>Submit</slot>
-		</button>
+		<div class="container">
+		  <header>
+			<slot name="header">Header</slot>
+		  </header>
+		  <main>
+			<slot>Main</slot>
+		  </main>
+		  <footer>
+			<slot name="footer">Footer</slot>
+		  </footer>
+		</div>
 	`
 })
 
