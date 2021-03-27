@@ -9,7 +9,17 @@
 	
 	<div id="demo-1">
 		
-		<navigation-link></navigation-link>
+		<navigation-link>
+		  <template v-slot:header>
+			<h1>Here might be a page title</h1>
+		  </template>
+
+		  
+
+		  <template v-slot:footer>
+			<p>Here's some contact info</p>
+		  </template>
+		</navigation-link>
 		
 	</div>
 
