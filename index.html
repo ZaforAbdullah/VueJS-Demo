@@ -5,23 +5,48 @@
 	<script src="https://cdn.jsdelivr.net/npm/vue@2.6.12/dist/vue.js"></script>
     <title>Demo</title>
 </head>
+<style>
+	#app {
+	  display: flex;
+	}
+	.my-list {
+		margin: 50px;
+	}
+	.title{
+		color: red;
+		font-size: 20px;
+	}
+</style>
 <body>
 	
-	<div id="demo-1">
-		
-		<navigation-link>
-		  <template v-slot:header>
-			<h1>Here might be a page title</h1>
-		  </template>
-
-		  
-
-		  <template v-slot:footer>
-			<p>Here's some contact info</p>
-		  </template>
-		</navigation-link>
-		
+	<div id="app">
+	  <!--Shapes-->
+	  <my-list :items="shapes" title="Shapes">
+		<template scope="shape">
+		  <div>{{ shape.name }} <small>({{ shape.sides }} sides)</small></div>
+		</template>
+	  </my-list>
+	  
+	  <!--Colors-->
+	  <my-list :items="colors" title="Colors">
+		<template scope="color">
+		  <div>
+			{{ color.name }}
+		  </div>
+		</template>
+	  </my-list>
 	</div>
+
+	<script type="text/x-template" id="my-list">
+	<div class="my-list">
+	  <div class="title">{{ title }}</div>
+	  <div class="list">
+		<div class="list-item" v-for="item in items">
+		  <slot v-bind="item"></slot>
+		</div>
+	  </div>
+	</div>
+	</script>
 
 	<script src="index.js"></script>
 </body>
